@@ -1,0 +1,87 @@
+        body {
+            margin: 0;
+            background-image: url('https://i.pinimg.com/1200x/a5/24/ad/a524aded32ea75d56b5cd2d59a61fda1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .paragraph-box {
+            padding: 2px;
+            width: 60%;
+            margin: 0;
+            flex: 1;
+        }
+
+        .content{
+            width: 60%;
+        }
+
+        .sidebar {
+            display: block;
+            height: 100vh;
+            width: 250px !important;
+            top: 0;
+            left: 0;
+            background-color: #070000f7;
+            overflow-y: auto;
+            margin: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            line-height: 50px;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar .image-button1 {
+            background-image: url('https://i.pinimg.com/736x/af/5a/99/af5a99c397c0bbe9b926f5fd58a1f2be.jpg');
+        }
+
+        .sidebar .image-button2 {
+            background-image: url('https://i.pinimg.com/1200x/32/0d/d1/320dd18314ebcd71035531c5787b050a.jpg')
+        }
+
+        .sidebar .image-button3 {
+            background-image: url('https://i.pinimg.com/736x/8a/fb/77/8afb775b718230dde2d09d5323cdfcb0.jpg');
+        }
+
+        .sidebar .image-button4 {
+            background-image:url('https://i.pinimg.com/736x/e1/16/4a/e1164a496ac1d3009dc2ced5e69fec28.jpg')
+        }
+
+        .sidebar .image-button {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            line-height: 50px;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .sidebar .image-button span {
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .sidebar .image-button:hover {
+            background-color: transparent;
+            opacity: 0.9;
+        }

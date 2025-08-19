@@ -1,6 +1,6 @@
         body {
             margin: 0;
-            background-image: url('https://i.pinimg.com/1200x/a5/24/ad/a524aded32ea75d56b5cd2d59a61fda1.jpg');
+            background-image: url('https://media.istockphoto.com/id/1447347442/photo/books.jpg?s=612x612&w=0&k=20&c=SuQudDUaDtw95lqvTRwYvhmPjVi2Kp5JVV9K-2bEa0Y=');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -17,25 +17,35 @@
             flex: 1;
         }
 
-        .content{
-            width: 60%;
+        .content {
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+            padding:20px;
+            box-sizing:border-box;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+            text-align: center;
+            padding-right:65px;
         }
 
         .sidebar {
             display: block;
-            height: 100vh;
-            width: 250px !important;
+            width: 22%;
             top: 0;
             left: 0;
             background-color: #070000f7;
-            overflow-y: auto;
             margin: 0;
         }
 
         .sidebar a {
             display: block;
             color: white;
-            padding: 10px 20px;
+            padding: 20px 25px;
             text-decoration: none;
             font-size: 18px;
             position: relative;
@@ -51,7 +61,7 @@
         }
 
         .sidebar .image-button2 {
-            background-image: url('https://i.pinimg.com/1200x/32/0d/d1/320dd18314ebcd71035531c5787b050a.jpg')
+            background-image: url('https://i.pinimg.com/1200x/32/0d/d1/320dd18314ebcd71035531c5787b050a.jpg');
         }
 
         .sidebar .image-button3 {
@@ -59,16 +69,31 @@
         }
 
         .sidebar .image-button4 {
-            background-image:url('https://i.pinimg.com/736x/e1/16/4a/e1164a496ac1d3009dc2ced5e69fec28.jpg')
+            background-image: url('https://i.pinimg.com/736x/e1/16/4a/e1164a496ac1d3009dc2ced5e69fec28.jpg');
         }
 
+        .sidebar .image-button5{
+            background-image: url('https://i.pinimg.com/736x/9e/59/5f/9e595fa6ea1e4bd626f483a3b14f6a40.jpg');
+        }
+
+        .sidebar .image-button6{
+            background-image: url('https://wallpapers.com/images/hd/shadow-and-bone-grishaverse-map-r0m4zp5fwrw0ei9p.jpg');
+        }
+
+        .sidebar .image-button7{
+            background-image:url('https://thebookcorps.wordpress.com/wp-content/uploads/2020/05/cfelch_waaakp7b.jpg?w=820&h=312&crop=1');
+        }
+
+        .sidebar .image-button8{
+            background-image:url('https://wallpapers.com/images/hd/percy-jackson-kjoknhvw7u7fn3si.jpg');
+        }
         .sidebar .image-button {
             background-size: cover;
             background-position: center;
             color: white;
             position: relative;
             line-height: 50px;
-            padding: 10px 20px;
+            padding: 20px 25px;
             font-size: 18px;
             text-align: left;
         }
@@ -84,4 +109,12 @@
         .sidebar .image-button:hover {
             background-color: transparent;
             opacity: 0.9;
+        }
+
+        .boxed {
+            display: inline-block;
+            border: 3px solid #ffffff;
+            padding: 6px 12px;
+            margin: 10px;
+            border-radius: 0;
         }

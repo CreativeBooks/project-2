@@ -9,7 +9,6 @@
     <style>
         body {
             background-image: url('https://images.unsplash.com/photo-1655823408869-73a394edb72e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhhcnJ5JTIwcG90dGVyJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww');
-            
         }
 
 
@@ -27,7 +26,7 @@
             text-align: center;
             border-collapse: collapse;
             margin: 0 auto;
-            
+
         }
 
         h1 {
@@ -41,16 +40,17 @@
         }
 
         ol {
-            color:white;
+            color: white;
         }
+
         button {
             width: 140px;
             height: 50px;
-            background-image: url('https://cdn.finebooksmagazine.com/sites/default/files/media-images/2023-06/harry-potter-back-envelope0.jpg'); 
+            background-image: url('https://cdn.finebooksmagazine.com/sites/default/files/media-images/2023-06/harry-potter-back-envelope0.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            color: black; 
+            color: black;
             border: none;
             cursor: pointer;
             font-size: 16px;
@@ -61,13 +61,12 @@
             opacity: 0.8;
         }
     </style>
-    <audio id="bg-music" src="Hedwig's Theme (Theme from Harry Potter).mp3" loop
-        style="display: none;"></audio>
+    <audio id="bg-music" src="Hedwig's Theme (Theme from Harry Potter).mp3" loop style="display: none;"></audio>
     <script>
         window.addEventListener('load', function () {
             const music = document.getElementById('bg-music');
 
-            music.volume = 0.5; 
+            music.volume = 0.5;
 
             music.play().catch(function (error) {
                 console.log("Autoplay failed. Music will play on user interaction.");
@@ -109,21 +108,21 @@
         </div>
         <div class="content" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
             <div>
-            <button id="play-btn" style=" margin: 2px;">Play Music</button>
-            <button id="pause-btn" style="background-color: white; margin:2px;">Pause Music</button>
-            <script>
-                const music = document.getElementById('bg-music');
-                const playBtn = document.getElementById('play-btn');
-                const pauseBtn = document.getElementById('pause-btn');
+                <button id="play-btn" style=" margin: 2px;">Play Music</button>
+                <button id="pause-btn" style="background-color: white; margin:2px;">Pause Music</button>
+                <script>
+                    const music = document.getElementById('bg-music');
+                    const playBtn = document.getElementById('play-btn');
+                    const pauseBtn = document.getElementById('pause-btn');
 
-                playBtn.addEventListener('click', function () {
-                    music.play();
-                });
+                    playBtn.addEventListener('click', function () {
+                        music.play();
+                    });
 
-                pauseBtn.addEventListener('click', function () {
-                    music.pause();
-                });
-            </script>
+                    pauseBtn.addEventListener('click', function () {
+                        music.pause();
+                    });
+                </script>
                 <h1 style="color:white; font-size:60px;padding-bottom: 20px;text-align:center;padding-top:0; margin:0;">
                     Harry Potter</h1>
 
@@ -250,86 +249,92 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                
+
                 <hr>
 
                 <h1 style="font-size: 30px;text-align: center;">Major Characters</h1>
-                
+
                 <div style="display:flex; justify-content:center; gap:15px; text-align:left; font-size:20px;">
-                
-                <ol type=I >
-                    <li>Main Characters</li>
+
                     <ol type=I>
-                        <li><b>Harry Potter</b> - "The Boy Who Lived"</li>
-                        <li><b>Hermione Granger</b> - Harry's Brilliant & Loyal Friend</li>
-                        <li><b>Ron Weasley</b> - Harry's Best Friend & Loyal Companion</li>
-                    </ol>
-                </ol>
-                
-                
-                <ol type=I start="2">
-                    <li>Hogwarts Staff</li>
-                    <ol type=I>
-                       <li><b>Albus Dumbledore</b> - Headmaster of Hogwarts, Order of Pheonix founder</li>
-                       <li><b>Minerva McGonagall</b> - Deputy Headmistress, Transfiguration professor</li>
-                       <li><b>Severus Snape</b> - Potions master</li>
-                       <li><b>Rubeus Hagrid</b> - Keeper of Keys and Grounds, later Care of Magical Creatures teacher</li>
-                       <li><b>Filius Flitwick</b> - Charms professor, Ravenclaw Head</li>
-                       <li><b>Pomona Sprout</b> - Herbology professor, Hufflepuff Head</li>
-                       <li><b>Sybill Trelawney</b> - Divination professor</li>
-                       <li><b>Remus Lupin</b> - Defense Against the Dark Arts Teacher (Book 3)</li>
-                       <li><b>Gilderoy Lockhart</b> - Defense Against the Dark Arts Teacher (Book 2)</li>
-                       <li><b>Dolores Umbridge</b> - Ministry-imposed DADA teacher (Book 5)</li>
+                        <li>Main Characters</li>
+                        <ol type=I>
+                            <li><b>Harry Potter</b> - "The Boy Who Lived"</li>
+                            <li><b>Hermione Granger</b> - Harry's Brilliant & Loyal Friend</li>
+                            <li><b>Ron Weasley</b> - Harry's Best Friend & Loyal Companion</li>
+                        </ol>
                     </ol>
 
-                </ol>                
+
+                    <ol type=I start="2">
+                        <li>Hogwarts Staff</li>
+                        <ol type=I>
+                            <li><b>Albus Dumbledore</b> - Headmaster of Hogwarts, Order of Pheonix founder</li>
+                            <li><b>Minerva McGonagall</b> - Deputy Headmistress, Transfiguration professor</li>
+                            <li><b>Severus Snape</b> - Potions master</li>
+                            <li><b>Rubeus Hagrid</b> - Keeper of Keys and Grounds, later Care of Magical Creatures
+                                teacher</li>
+                            <li><b>Filius Flitwick</b> - Charms professor, Ravenclaw Head</li>
+                            <li><b>Pomona Sprout</b> - Herbology professor, Hufflepuff Head</li>
+                            <li><b>Sybill Trelawney</b> - Divination professor</li>
+                            <li><b>Remus Lupin</b> - Defense Against the Dark Arts Teacher (Book 3)</li>
+                            <li><b>Gilderoy Lockhart</b> - Defense Against the Dark Arts Teacher (Book 2)</li>
+                            <li><b>Dolores Umbridge</b> - Ministry-imposed DADA teacher (Book 5)</li>
+                        </ol>
+
+                    </ol>
                 </div>
 
                 <div style="display:flex; justify-content:center; gap:15px; text-align:left;font-size:20px;">
-                <ol type=I start="3">
-                    <li>The Weasley Family</li>
-                    <ol type=I>
-                        <li><b>Ginny Weasley</b> - Ron's Little Sister</li>
-                        <li><b>Fred & George Weasley</b> - Founders of Weasley's Wizard Wheezes</li>
-                        <li><b>Percy Weasley</b> - Ministry Employee</li>
-                        <li><b>Bill & Charlie Weasley</b> - Older Brothers with careers in curse-breaking & dragon</li>
-                        <li><b>Molly & Arthur Weasley</b> - Weasley Family Parents</li>
+                    <ol type=I start="3">
+                        <li>The Weasley Family</li>
+                        <ol type=I>
+                            <li><b>Ginny Weasley</b> - Ron's Little Sister</li>
+                            <li><b>Fred & George Weasley</b> - Founders of Weasley's Wizard Wheezes</li>
+                            <li><b>Percy Weasley</b> - Ministry Employee</li>
+                            <li><b>Bill & Charlie Weasley</b> - Older Brothers with careers in curse-breaking & dragon
+                            </li>
+                            <li><b>Molly & Arthur Weasley</b> - Weasley Family Parents</li>
+                        </ol>
                     </ol>
-                </ol>
-                <ol type=I start="4">
-                    <li>Order of Pheonix Members</li>
-                    <ol type=I>
-                        <li><b>Sirius Blank</b> - Harry's Godfather</li>
-                        <li><b>Remus Lupin</b> - Werewolf</li>
-                        <li><b>Alaster "Mad-eye" Moody</b> - Legendary Auror</li>
-                        <li><b>Nymphadora Tonks</b> - Metamorphmagus, Auror</li>
+                    <ol type=I start="4">
+                        <li>Order of Pheonix Members</li>
+                        <ol type=I>
+                            <li><b>Sirius Blank</b> - Harry's Godfather</li>
+                            <li><b>Remus Lupin</b> - Werewolf</li>
+                            <li><b>Alaster "Mad-eye" Moody</b> - Legendary Auror</li>
+                            <li><b>Nymphadora Tonks</b> - Metamorphmagus, Auror</li>
+                        </ol>
                     </ol>
-                </ol>
                 </div>
                 <div style="display:flex; justify-content:center; gap:15px; text-align:left;font-size:20px;">
-                <ol type=I start="5">
-                    <li>Death Eaters & Dark Characters</li>
-                    <ol type=I>
-                        <li>Lord Voldemort (Tom Riddle)</li>
-                        <li><b>Bellatrix Lestrange</b> - Loyal Follower of Voldemort</li>
-                        <li><b>Lucius Malfoy</b> - Influential Death Eater</li>
-                        <li><b>Draco Malfoy</b> - Harry's Rival at Hogwarts</li>
-                        <li><b>Petter Pettigraw (Wormtail)</b> - Betrayer of Harry's parents, Voldemort's servant</li>
+                    <ol type=I start="5">
+                        <li>Death Eaters & Dark Characters</li>
+                        <ol type=I>
+                            <li>Lord Voldemort (Tom Riddle)</li>
+                            <li><b>Bellatrix Lestrange</b> - Loyal Follower of Voldemort</li>
+                            <li><b>Lucius Malfoy</b> - Influential Death Eater</li>
+                            <li><b>Draco Malfoy</b> - Harry's Rival at Hogwarts</li>
+                            <li><b>Petter Pettigraw (Wormtail)</b> - Betrayer of Harry's parents, Voldemort's servant
+                            </li>
+                        </ol>
                     </ol>
-                </ol>
 
-                <ol type=I start="6" style="font-size: 20px;">
-                    <li>Students</li>
-                    <ol type=I>
-                        <li><b>Neville Longbottom</b> - Gryffindor, pivotal in Book 7</li>
-                        <li><b>Luna Lovegood</b> - Ravenclaw with deep insight</li>
-                        <li><b>Cho Chang</b> - Harry's first crush</li>
-                        <li><b>Cedric Diggory</b> - Hufflepuff chamption, killed by Voldemort</li>
-                        <li><b>Dean Thomas</b> - Gryffindor classmates</li>
+                    <ol type=I start="6" style="font-size: 20px;">
+                        <li>Students</li>
+                        <ol type=I>
+                            <li><b>Neville Longbottom</b> - Gryffindor, pivotal in Book 7</li>
+                            <li><b>Luna Lovegood</b> - Ravenclaw with deep insight</li>
+                            <li><b>Cho Chang</b> - Harry's first crush</li>
+                            <li><b>Cedric Diggory</b> - Hufflepuff chamption, killed by Voldemort</li>
+                            <li><b>Dean Thomas</b> - Gryffindor classmates</li>
+                        </ol>
                     </ol>
-                </ol>
 
                 </div>
+                <hr>
+
+            
 
             </div>
         </div>

@@ -58,34 +58,43 @@
 
         .sidebar .image-button1 {
             background-image: url('https://i.pinimg.com/736x/af/5a/99/af5a99c397c0bbe9b926f5fd58a1f2be.jpg');
+            height:50px;
+            
         }
 
         .sidebar .image-button2 {
             background-image: url('https://i.pinimg.com/1200x/32/0d/d1/320dd18314ebcd71035531c5787b050a.jpg');
+            height:50px;
         }
 
         .sidebar .image-button3 {
             background-image: url('https://i.pinimg.com/736x/8a/fb/77/8afb775b718230dde2d09d5323cdfcb0.jpg');
+            height:50px;
         }
 
         .sidebar .image-button4 {
             background-image: url('https://i.pinimg.com/736x/e1/16/4a/e1164a496ac1d3009dc2ced5e69fec28.jpg');
+            height:50px;
         }
 
         .sidebar .image-button5{
             background-image: url('https://i.pinimg.com/736x/9e/59/5f/9e595fa6ea1e4bd626f483a3b14f6a40.jpg');
+            height:50px;
         }
 
         .sidebar .image-button6{
             background-image: url('https://wallpapers.com/images/hd/shadow-and-bone-grishaverse-map-r0m4zp5fwrw0ei9p.jpg');
+            height:50px;
         }
 
         .sidebar .image-button7{
             background-image:url('https://thebookcorps.wordpress.com/wp-content/uploads/2020/05/cfelch_waaakp7b.jpg?w=820&h=312&crop=1');
+            height:50px;
         }
 
         .sidebar .image-button8{
             background-image:url('https://wallpapers.com/images/hd/percy-jackson-kjoknhvw7u7fn3si.jpg');
+            height:50px;
         }
         .sidebar .image-button {
             background-size: cover;
@@ -93,7 +102,7 @@
             color: white;
             position: relative;
             line-height: 50px;
-            padding: 20px 25px;
+            padding: 20px 20px;
             font-size: 18px;
             text-align: left;
         }

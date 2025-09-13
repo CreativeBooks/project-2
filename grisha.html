@@ -45,7 +45,46 @@
             padding: 2px 6px;
             border-radius: 3px;
         }
+
+        button {
+            width: 140px;
+            height: 40px;
+            background-color: #2C3E50;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white; 
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Kings';
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
     </style>
+    <audio id="bg-music" src="True North - Shadow and Bone Soundtrack (by Joseph Trapanese).mp3" loop
+        style="display: none;"></audio>
+    <script>
+        window.addEventListener('load', function () {
+            const music = document.getElementById('bg-music');
+
+            music.volume = 0.5; 
+
+            music.play().catch(function (error) {
+                console.log("Autoplay failed. Music will play on user interaction.");
+            });
+
+            document.addEventListener('click', function () {
+                if (music.paused) {
+                    music.play();
+                }
+            }, { once: true });
+        });
+
+
+    </script>
 
 </head>
 
@@ -72,6 +111,21 @@
         </div>
         <div class="content" style="font-family:'Kings';">
             <div>
+                <button id="play-btn" style=" margin: 2px;">Play Music</button>
+            <button id="pause-btn" style="margin:2px;">Pause Music</button>
+            <script>
+                const music = document.getElementById('bg-music');
+                const playBtn = document.getElementById('play-btn');
+                const pauseBtn = document.getElementById('pause-btn');
+
+                playBtn.addEventListener('click', function () {
+                    music.play();
+                });
+
+                pauseBtn.addEventListener('click', function () {
+                    music.pause();
+                });
+            </script>
                 <h1
                     style="color:white; font-size:60px;padding-bottom: 20px;text-align:center;padding-top:0; margin:0; width:100%; ">
                     Grishaverse</h1>

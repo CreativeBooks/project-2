@@ -10,6 +10,25 @@
         body {
             background: linear-gradient(to right, #141e30, #2d4969);
         }
+
+        button {
+            width: 140px;
+            height: 40px;
+            background-image: url('https://external-preview.redd.it/06PqIaNN_e1qyzN3cSAmiu6U0G52hFW7MsSfV-uxJkM.jpg?width=1080&crop=smart&auto=webp&s=5cda5f4f275065b4943a3213e17fc4683d2415d2');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white; 
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: bold;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
     </style>
     <audio id="bg-music" src="Ludovico Einaudi - Nuvole Bianche (Official Visualiser).mp3" loop
         style="display: none;"></audio>
@@ -56,8 +75,8 @@
 
 
         <div class="content boxed" style="font-family: fantasy;">
-            <button id="play-btn" style="background-color: white;  margin: 2px;">Play Music</button>
-            <button id="pause-btn" style="background-color: white; margin:2px;">Pause Music</button>
+            <button id="play-btn" style="  margin: 2px;">Play Music</button>
+            <button id="pause-btn" style=" margin:2px;">Pause Music</button>
             <script>
                 const music = document.getElementById('bg-music');
                 const playBtn = document.getElementById('play-btn');

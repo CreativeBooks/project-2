@@ -43,7 +43,45 @@
         ol {
             color:white;
         }
+        button {
+            width: 140px;
+            height: 50px;
+            background-image: url('https://cdn.finebooksmagazine.com/sites/default/files/media-images/2023-06/harry-potter-back-envelope0.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: black; 
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
     </style>
+    <audio id="bg-music" src="Hedwig's Theme (Theme from Harry Potter).mp3" loop
+        style="display: none;"></audio>
+    <script>
+        window.addEventListener('load', function () {
+            const music = document.getElementById('bg-music');
+
+            music.volume = 0.5; 
+
+            music.play().catch(function (error) {
+                console.log("Autoplay failed. Music will play on user interaction.");
+            });
+
+            document.addEventListener('click', function () {
+                if (music.paused) {
+                    music.play();
+                }
+            }, { once: true });
+        });
+
+
+    </script>
 </head>
 
 <body>
@@ -71,6 +109,21 @@
         </div>
         <div class="content" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
             <div>
+            <button id="play-btn" style=" margin: 2px;">Play Music</button>
+            <button id="pause-btn" style="background-color: white; margin:2px;">Pause Music</button>
+            <script>
+                const music = document.getElementById('bg-music');
+                const playBtn = document.getElementById('play-btn');
+                const pauseBtn = document.getElementById('pause-btn');
+
+                playBtn.addEventListener('click', function () {
+                    music.play();
+                });
+
+                pauseBtn.addEventListener('click', function () {
+                    music.pause();
+                });
+            </script>
                 <h1 style="color:white; font-size:60px;padding-bottom: 20px;text-align:center;padding-top:0; margin:0;">
                     Harry Potter</h1>
 

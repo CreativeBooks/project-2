@@ -19,6 +19,27 @@
 
         }
     </style>
+    <audio id="bg-music" src="Ludovico Einaudi - Nuvole Bianche (Official Visualiser).mp3" loop
+        style="display: none;"></audio>
+    <script>
+        window.addEventListener('load', function () {
+            const music = document.getElementById('bg-music');
+
+            music.volume = 0.5; 
+
+            music.play().catch(function (error) {
+                console.log("Autoplay failed. Music will play on user interaction.");
+            });
+
+            document.addEventListener('click', function () {
+                if (music.paused) {
+                    music.play();
+                }
+            }, { once: true });
+        });
+
+
+    </script>
 </head>
 
 <body>
@@ -43,6 +64,21 @@
 
 
         <div class="content boxed" style="font-family: fantasy;">
+            <button id="play-btn" style="background-color: white;  margin: 2px;">Play Music</button>
+            <button id="pause-btn" style="background-color: white; margin:2px;">Pause Music</button>
+            <script>
+                const music = document.getElementById('bg-music');
+                const playBtn = document.getElementById('play-btn');
+                const pauseBtn = document.getElementById('pause-btn');
+
+                playBtn.addEventListener('click', function () {
+                    music.play();
+                });
+
+                pauseBtn.addEventListener('click', function () {
+                    music.pause();
+                });
+            </script>
             <table>
                 <tr>
                     <th colspan="4" style="color:white; font-size:60px; padding-left:70px">Sci-Fi</th>

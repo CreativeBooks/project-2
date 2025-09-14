@@ -53,7 +53,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            color: white; 
+            color: white;
             border: none;
             cursor: pointer;
             font-size: 16px;
@@ -63,6 +63,49 @@
         button:hover {
             opacity: 0.8;
         }
+
+        .carousel-container {
+            width: 600px;
+            margin: 0 auto;
+            border: 2px solid white;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel-buttons {
+            text-align: center;
+            margin: 0px auto;
+            margin-top: 10px;
+        }
+
+        .carousel-buttons button {
+            background-color: #2C3E50;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color:white;
+        }
+
+        .carousel-buttons button:hover {
+            background-color: #555;
+        }
     </style>
     <audio id="bg-music" src="True North - Shadow and Bone Soundtrack (by Joseph Trapanese).mp3" loop
         style="display: none;"></audio>
@@ -70,7 +113,7 @@
         window.addEventListener('load', function () {
             const music = document.getElementById('bg-music');
 
-            music.volume = 0.5; 
+            music.volume = 0.5;
 
             music.play().catch(function (error) {
                 console.log("Autoplay failed. Music will play on user interaction.");
@@ -112,20 +155,20 @@
         <div class="content" style="font-family:'Kings';">
             <div>
                 <button id="play-btn" style=" margin: 2px;">Play Music</button>
-            <button id="pause-btn" style="margin:2px;">Pause Music</button>
-            <script>
-                const music = document.getElementById('bg-music');
-                const playBtn = document.getElementById('play-btn');
-                const pauseBtn = document.getElementById('pause-btn');
+                <button id="pause-btn" style="margin:2px;">Pause Music</button>
+                <script>
+                    const music = document.getElementById('bg-music');
+                    const playBtn = document.getElementById('play-btn');
+                    const pauseBtn = document.getElementById('pause-btn');
 
-                playBtn.addEventListener('click', function () {
-                    music.play();
-                });
+                    playBtn.addEventListener('click', function () {
+                        music.play();
+                    });
 
-                pauseBtn.addEventListener('click', function () {
-                    music.pause();
-                });
-            </script>
+                    pauseBtn.addEventListener('click', function () {
+                        music.pause();
+                    });
+                </script>
                 <h1
                     style="color:white; font-size:60px;padding-bottom: 20px;text-align:center;padding-top:0; margin:0; width:100%; ">
                     Grishaverse</h1>
@@ -470,6 +513,64 @@
                     </tr>
 
                 </table>
+                <hr>
+
+                <script>
+                    let currentIndex = 0;
+
+                    function moveSlide(direction) {
+                        const slide = document.getElementById('carousel-slide');
+                        const images = slide.querySelectorAll('img');
+                        const totalImages = images.length;
+                        const imageWidth = images[0].clientWidth; // Get actual width of image
+
+                        currentIndex += direction;
+
+                        // Loop around
+                        if (currentIndex < 0) {
+                            currentIndex = totalImages - 1;
+                        } else if (currentIndex >= totalImages) {
+                            currentIndex = 0;
+                        }
+
+                        slide.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+                    }
+                </script>
+
+
+
+                <div class="carousel-container">
+                    <div class="carousel-slide" id="carousel-slide">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNjViZDRmNzUtYWNmMC00YjJlLTk3Y2EtMGYyMzg5N2U1OGMyXkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 1">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTFlMzI1ZGMtOTY1Yi00ZDViLTg0OTItYTMxZGU5MzMxYmU1XkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 2">
+                        <img src="https://m.media-amazon.com/images/M/MV5BODAxZmUzNmMtNTdjMi00ZjBhLWJlMjEtZjZmYjE5YmRlMjg2XkEyXkFqcGc@._V1_QL75_UX1640_.jpg"
+                            alt="Slide 3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZmE2YTA2YTMtZmU4NC00Nzg1LWFiMTMtNjAxZGVmZGI2Y2Y1XkEyXkFqcGc@._V1_QL75_UX1640_.jpg"
+                            alt="Slide 4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYzM2MWNhNjgtOGZlMi00ZWZjLTk4NzUtNzYwNTI3MDkxMjU5XkEyXkFqcGc@._V1_QL75_UX1640_.jpg"
+                            alt="Slide 5">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYTlmYzRiZDctNGM5Ny00Yzg5LThlMGMtOGZjYmIwMmEzOGVjXkEyXkFqcGc@._V1_QL75_UX1640_.jpg"
+                            alt="Slide 6">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYzM2ODk0NjYtYTM1ZS00ZDJjLWFiNzEtMjUxMTFlNmE1MjFhXkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 7">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjVjNTc0ZjEtY2ZlMi00YTE4LWI3M2YtMWFkNmYxNTZiMzQ0XkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 8">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMmIxYTAwN2ItNzBhZC00MWY0LTg4ZDktYmUxZTA3Y2ZjOGI4XkEyXkFqcGc@._V1_QL75_UX1640_.jpg"
+                            alt="Slide 9">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzkwNzgzNTAtNTYwNi00NGJhLWIyODUtMWI0YjE3ZDI5NjM1XkEyXkFqcGc@._V1_QL75_UX1640_.jpg"
+                            alt="Slide 10">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZmUzZjU4MzctMDVmMy00MmYyLTk1NTItZGRhNGY5ZDdkNzFkXkEyXkFqcGc@._V1_QL75_UX892_.jpg"
+                            alt="Slide 11">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNjhhZWQ2M2YtZTc1Yy00OWJiLTlkMDktMTQ0NDE1ZTEwMWE4XkEyXkFqcGc@._V1_QL75_UX804_.jpg" 
+                            alt="Slide 12">
+                    </div>
+                </div>
+                <div class="carousel-buttons" style="padding-left:40px;">
+                    <button onclick="moveSlide(-1)">Previous</button>
+                    <button onclick="moveSlide(1)">Next</button>
+                </div>
             </div>
 
 

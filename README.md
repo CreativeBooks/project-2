@@ -17,3 +17,4 @@ I made this project because I really like reading and so I wanted people to know
 
 I learned how to effectively used div blocks in the website since that is the basis of my website. I struggled trying to create the sidebar since it wouldn't look the way I wanted and sometimes the content would compress the sidebar.
 
+[![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)

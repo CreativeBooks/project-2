@@ -33,8 +33,8 @@
         }
 
         img {
-            width:150px;
-            height:221px;
+            width: 150px;
+            height: 221px;
         }
 
         button {
@@ -44,7 +44,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            color: black; 
+            color: black;
             border: none;
             cursor: pointer;
             font-size: 16px;
@@ -54,27 +54,67 @@
         button:hover {
             opacity: 0.8;
         }
+
+         .carousel-container {
+            width: 600px;
+            margin: 0 auto;
+            border: 2px solid white;
+            overflow: hidden;
+            height:400px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .carousel-buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-buttons button {
+            background-color: rgb(220, 153, 9);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-buttons button:hover {
+            background-color: #555;
+        }
+       
     </style>
-    <audio id="bg-music" src="Percy Jackson and the Olympians.mp3" loop
-        style="display: none;"></audio>
+    <audio id="bg-music" src="Percy Jackson and the Olympians.mp3" loop style="display: none;"></audio>
     <script>
         window.addEventListener('load', function () {
             const music = document.getElementById('bg-music');
 
-            music.volume = 0.5; 
+            music.volume = 0.5;
 
             music.play().catch(function (error) {
                 console.log("Autoplay failed. Music will play on user interaction.");
             });
 
-            document.addEventListener('click', function () {
-                if (music.paused) {
-                    music.play();
-                }
-            }, { once: true });
+            const playBtn = document.getElementById('play-btn');
+
+            playBtn.addEventListener('click', function () {
+                music.play();
+            });
         });
-
-
     </script>
 </head>
 
@@ -102,21 +142,21 @@
         <div class="content" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
 
             <div>
-            <button id="play-btn" style=" margin: 2px;">Play Music</button>
-            <button id="pause-btn" style="margin:2px;">Pause Music</button>
-            <script>
-                const music = document.getElementById('bg-music');
-                const playBtn = document.getElementById('play-btn');
-                const pauseBtn = document.getElementById('pause-btn');
+                <button id="play-btn" style=" margin: 2px;">Play Music</button>
+                <button id="pause-btn" style="margin:2px;">Pause Music</button>
+                <script>
+                    const music = document.getElementById('bg-music');
+                    const playBtn = document.getElementById('play-btn');
+                    const pauseBtn = document.getElementById('pause-btn');
 
-                playBtn.addEventListener('click', function () {
-                    music.play();
-                });
+                    playBtn.addEventListener('click', function () {
+                        music.play();
+                    });
 
-                pauseBtn.addEventListener('click', function () {
-                    music.pause();
-                });
-            </script>
+                    pauseBtn.addEventListener('click', function () {
+                        music.pause();
+                    });
+                </script>
                 <h1 style="text-align:center; color:white;font-size:40px;">Percy Jackson</h1>
 
                 <table style="border:4px solid white; padding-bottom: 10px; padding-top: 10px;">
@@ -329,74 +369,154 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230308/RachelDare-195x292.jpg" alt="rachel dare" style="width:150px;height:221px;">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230308/RachelDare-195x292.jpg"
+                                alt="rachel dare" style="width:150px;height:221px;">
                             <figcaption>Rachel Elizabeth Dare</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2017/02/11230255/will-solace-195x292.jpg" alt="will solace" style="width:150px;height:221px;">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2017/02/11230255/will-solace-195x292.jpg"
+                                alt="will solace" style="width:150px;height:221px;">
                             <figcaption>Will Solace</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230304/Tyson-195x292.jpg" alt="tyson" style="width:150px;height:221px;">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230304/Tyson-195x292.jpg"
+                                alt="tyson" style="width:150px;height:221px;">
                             <figcaption>Tyson</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11225804/chiron2-195x292.jpg" alt="chiron" style="width:150px;height:221px;">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11225804/chiron2-195x292.jpg"
+                                alt="chiron" style="width:150px;height:221px;">
                             <figcaption>Chiron</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230312/LeoValdez-195x292.jpg" alt="leo valdex" style="width:150px;height:221px;">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230312/LeoValdez-195x292.jpg"
+                                alt="leo valdex" style="width:150px;height:221px;">
                             <figcaption>Leo Valdez</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230258/jason-redraw2-195x292.jpg" alt="jason grace">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230258/jason-redraw2-195x292.jpg"
+                                alt="jason grace">
                             <figcaption>Jason Grace</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230315/HazelLevesque-195x292.jpg" alt="hazel levesque">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230315/HazelLevesque-195x292.jpg"
+                                alt="hazel levesque">
                             <figcaption>Hazel Levesque</figcaption>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230317/FrankZhang-195x292.jpg" alt="frank zhang">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230317/FrankZhang-195x292.jpg"
+                                alt="frank zhang">
                             <figcaption>Frank Zhang</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230248/Octavian-2-195x292.jpg" alt="octavian">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230248/Octavian-2-195x292.jpg"
+                                alt="octavian">
                             <figcaption>Octavian</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230309/PiperMcLean-195x292.jpg" alt="piper mclean">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230309/PiperMcLean-195x292.jpg"
+                                alt="piper mclean">
                             <figcaption>Piper McLean</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230306/ReynaRamirezArellano-195x292.jpg" alt="Reyna Avila Ramírez-Arellano">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11230306/ReynaRamirezArellano-195x292.jpg"
+                                alt="Reyna Avila Ramírez-Arellano">
                             <figcaption>Reyna Arellano</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11225841/humanapollo-195x292.jpg" alt="Lester Papadopoulos">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11225841/humanapollo-195x292.jpg"
+                                alt="Lester Papadopoulos">
                             <figcaption>Lester Papadopoulos</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2018/04/11225840/apoll3o--195x292.jpg" alt="apollo">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2018/04/11225840/apoll3o--195x292.jpg"
+                                alt="apollo">
                             <figcaption>Apollo</figcaption>
                         </td>
                         <td>
-                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11225838/megonemroe2-195x292.jpg" alt="Meg McCaffrey">
+                            <img src="https://cdn.rickriordan.com/wp-content/uploads/2016/04/11225838/megonemroe2-195x292.jpg"
+                                alt="Meg McCaffrey">
                             <figcaption>Meg McCaffrey</figcaption>
                         </td>
-                    </tr>    
-                        
+                    </tr>
+
                 </table>
 
                 <hr>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/JTZHpPZFauY?si=m4W_oaTFWdtJkXXH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="550" height="315" src="https://www.youtube.com/embed/82xS4goDWZY?si=tDTkSoRaJ7qbv0ec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JTZHpPZFauY?si=m4W_oaTFWdtJkXXH"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="550" height="315" src="https://www.youtube.com/embed/82xS4goDWZY?si=tDTkSoRaJ7qbv0ec"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+                    <hr>
+
+                    <script>
+                    let currentIndex = 0;
+
+                    function moveSlide(direction) {
+                        const slide = document.getElementById('carousel-slide');
+                        const images = slide.querySelectorAll('img');
+                        const totalImages = images.length;
+                        const imageWidth = images[0].clientWidth; // Get actual width of image
+
+                        currentIndex += direction;
+
+                        // Loop around
+                        if (currentIndex < 0) {
+                            currentIndex = totalImages - 1;
+                        } else if (currentIndex >= totalImages) {
+                            currentIndex = 0;
+                        }
+
+                        slide.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+                    }
+                </script>
+
+
+
+                <div class="carousel-container">
+                    <div class="carousel-slide" id="carousel-slide">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYzE1MWNmNzUtMDY4NS00N2E4LThmODktZTUxNjM1MWZiMWYyXkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 1">
+                        <img src="https://m.media-amazon.com/images/M/MV5BODI0NjgwYjAtYzQ1Mi00NDUwLTljZDktMzk2MTA2NTdmOWM4XkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 2">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzg0ODE3OTktMTRlMC00NzI2LWE5ZWYtZTYxNDc1NjA4NDI3XkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 3">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNTViMzM5NjUtN2M5Ny00NDU3LWEyMWUtZmFjNzhhZDdkMmNjXkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 4">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDkyYzUzNzQtNjY2ZC00MjAyLTg5NmYtMjg0ZDM3NzUwYTBiXkEyXkFqcGc@._V1_QL75_UX632_.jpg"
+                            alt="Slide 5">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDVhNjQ5ODItZmZhNC00NjhjLTgzYmItNDlkM2IwYWJjNzc0XkEyXkFqcGc@._V1_QL75_UX878_.jpg"
+                            alt="Slide 6">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMTE5ZjIwYzEtYWJjZS00YTg4LWEwM2YtNDkxMGYzZjRkMzExXkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 7">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDZlMzRjZGMtZDE5ZC00NWNiLTlmODItYWUyMGYwODAzNDhhXkEyXkFqcGc@._V1_QL75_UX870_.jpg"
+                            alt="Slide 8">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNGUwMGI1Y2YtZjhkMy00ZWIzLTk2NTgtNjI4ODJjMWNmMDA5XkEyXkFqcGc@._V1_QL75_UX632_.jpg"
+                            alt="Slide 9">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDhkMmQzYzgtOWY5MC00Mjg1LTkzMmItMmNjZTM0NDk0MjUwXkEyXkFqcGc@._V1_QL75_UX730_.jpg"
+                            alt="Slide 10">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTkxNWRjNTYtZGRkYi00ODJhLTk4OGItYTBiMjczODQ0Zjc3XkEyXkFqcGc@._V1_QL75_UX804_.jpg"
+                            alt="Slide 11">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZTAwZTU4OTYtZmY1OC00YjA5LTlmYTMtNmE2ZDdkYWQ2YjUzXkEyXkFqcGc@._V1_QL75_UX632_.jpg" alt="Slide 12">
+                    </div>
+                </div>
+                <div class="carousel-buttons" style="padding-left:40px;">
+                    <button onclick="moveSlide(-1)" style="color:black">Previous</button>
+                    <button onclick="moveSlide(1)" style="color:black;">Next</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
 </body>
 
 </html>

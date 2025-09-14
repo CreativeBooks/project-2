@@ -38,11 +38,11 @@
                 console.log("Autoplay failed. Music will play on user interaction.");
             });
 
-            document.addEventListener('click', function () {
-                if (music.paused) {
-                    music.play();
-                }
-            }, { once: true });
+            const playBtn = document.getElementById('play-btn');
+
+            playBtn.addEventListener('click', function () {
+                music.play();
+            });
         });
 
 
